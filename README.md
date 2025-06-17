@@ -1,4 +1,4 @@
-# ❚█══█❚NoExcusesFitness-a-gym-website
+# NoExcusesFitness-a-gym-website
 
 This website is built using only HTML, CSS, and JS. This project mainly focused on **CSS Design System** to make a website optimized and scalable.
 
