@@ -19,4 +19,4 @@ Here are the main benefits of using a design system for CSS:
 ## Project View
 To see a live preview of a website, click on the below link:
 
-[**Click here**](https://github.com/SujayKumarMondal/NoExcusesFitnessWebsite)
+[**Click here**](https://sujaykumarmondal.github.io/NoExcusesFitnessWebsite/)
