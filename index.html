@@ -16,6 +16,87 @@
     html {
       scroll-behavior: smooth;
     }
+
+    /* Section Titles */
+    .section-title {
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .section-title .highlight {
+      color: #e63946;
+    }
+
+    /* Facilities Styling */
+    .facilities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .facility-card {
+      background: linear-gradient(to right, #1d1f27, #2c2e38);
+      color: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .facility-card i {
+      font-size: 1.5rem;
+      color: #e63946;
+    }
+    .facility-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    /* FAQ Accordion Styling */
+    .faq-section .faq-accordion {
+      margin-top: 3rem;
+      max-width: 600px;
+      margin: auto;
+    }
+    .faq-item {
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #ccc;
+    }
+    .faq-question {
+      width: 100%;
+      padding: 1rem;
+      text-align: left;
+      background: #f8f9fa;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .faq-question:hover {
+      background: #e63946;
+      color: #fff;
+    }
+    .faq-answer {
+      display: none;
+    }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    /* FAQ Fade-in Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Add space above FAQ section */
+    .faq-section {
+      margin-top: 3rem;
+    }
   </style>
 </head>
 
@@ -236,6 +317,61 @@
         </div>
       </div>
     </section>
+
+    <!-- NEW SECTION: Gallery -->
+    <section class="gallery-section padding-block-900">
+      <div class="container text-center">
+        <h2 class="fs-secondary-heading fw-bold uppercase">Gym <span class="special-text">Gallery</span></h2>
+        <div class="gallery-wrapper">
+          <img src="images/gallery1.jpg" alt="Gallery 1" />
+          <img src="images/gallery2.jpg" alt="Gallery 2" />
+          <img src="images/gallery3.jpg" alt="Gallery 3" />
+          <img src="images/gallery4.jpg" alt="Gallery 4" />
+        </div>
+      </div>
+    </section>
+
+    <!-- FACILITIES SECTION -->
+    <section id="facilities" class="section facilities-section">
+      <div class="container">
+        <h2 class="section-title">Our <span class="highlight">Facilities</span></h2>
+        <div class="facilities-grid">
+          <div class="facility-card"><i class="fa-solid fa-dumbbell"></i> Modern Weightlifting Equipment</div>
+          <div class="facility-card"><i class="fa-solid fa-wifi"></i> Free Wi-Fi Access</div>
+          <div class="facility-card"><i class="fa-solid fa-shower"></i> Clean Showers & Lockers</div>
+          <div class="facility-card"><i class="fa-solid fa-heart-pulse"></i> Cardio Zone</div>
+          <div class="facility-card"><i class="fa-solid fa-person-running"></i> CrossFit & Functional Area</div>
+          <div class="facility-card"><i class="fa-solid fa-spa"></i> Steam, Sauna & Massage</div>
+          <div class="facility-card"><i class="fa-solid fa-mug-hot"></i> Healthy Cafe Corner</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="section faq-section">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
+        <div class="faq-accordion">
+          <div class="faq-item">
+            <button class="faq-question">What are the gym's operating hours?</button>
+            <div class="faq-answer">Our gym is open from 5:00 AM to 11:00 PM, seven days a week.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Do you offer personal training sessions?</button>
+            <div class="faq-answer">Yes! We offer personalized training plans from certified coaches.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Are trial sessions available?</button>
+            <div class="faq-answer">We offer 1-day free trial sessions. Just visit and register at the desk.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Is there any diet/nutrition counseling?</button>
+            <div class="faq-answer">Absolutely! Our in-house dietitian will guide you with custom meal plans.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
     <!-- FOOTER / CONTACT -->
     <footer class="primary-footer padding-block-900 bg-secondary" id="contact-section">
